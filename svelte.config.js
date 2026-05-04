@@ -6,19 +6,12 @@ export default {
     adapter: adapter(),
 
     csp: {
-      mode: 'auto', 
+      mode: 'auto', // or 'hash' / 'nonce'
       directives: {
         'default-src': ['self'],
-        // 1. Allow the SDK scripts to run
         'script-src': ['self'],
-        
-        // 2. Allow styles from the SDK and your inline JS-generated styles
-        'style-src': ['self'], 
-        
-        // 3. Allow gradients and images from the SDK
+        'style-src': ['self'], // 👈 allow your SDK CSS
         'img-src': ['self', 'data:'],
-        
-        // 4. CRITICAL: Allow the API call you shared earlier
         'connect-src': ['self']
       }
     }
