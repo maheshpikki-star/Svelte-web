@@ -10,7 +10,7 @@ export default {
       directives: {
         'default-src': ['self'],
         'script-src': ['self'],
-        'style-src': ['self'], // 👈 allow your SDK CSS
+        'style-src': ['self', "'unsafe-inline'"], // 👈 allow your SDK CSS
         'img-src': ['self', 'data:'],
         'connect-src': ['self']
       }
