@@ -95,7 +95,7 @@
 </div>
 
 <style>
-  :global(body) {
+  body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background: #f0f2f5;
