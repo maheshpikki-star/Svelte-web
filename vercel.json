@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://*.apxor.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self';"
+          "value": "default-src 'self'; script-src 'self' https://*.apxor.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://*.apxor.com; img-src 'self' data:;"
         }
       ]
     }
