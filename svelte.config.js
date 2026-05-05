@@ -1,18 +1,20 @@
 /** @type {import("@sveltejs/vite-plugin-svelte").SvelteConfig} */
 import adapter from '@sveltejs/adapter-auto';
 
+const domains = ["https://*.apxor.com", "unsafe-inline"]
+
 export default {
   kit: {
     adapter: adapter(),
 
     csp: {
-      mode: 'auto',
+      mode: 'nonce',
       directives: {
-        'default-src': ['self'],
-        'script-src': ['self', "https://*.apxor.com"],
-        'style-src': ['self', "https://*.apxor.com"],
-        'img-src': ['self', 'data:'],
-        'connect-src': ['self']
+        'default-src': ['self', ...domains],
+        'script-src': ['self', ...domains],
+        'style-src': ['self', ...domains],
+        'img-src': ['self', 'data:', ...domains],
+        'connect-src': ['self', ...domains]
       }
     }
   }
