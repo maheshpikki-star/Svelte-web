@@ -6,11 +6,11 @@ export default {
     adapter: adapter(),
 
     csp: {
-      mode: 'auto', // or 'hash' / 'nonce'
+      mode: 'auto',
       directives: {
         'default-src': ['self'],
-        'script-src': ['self'],
-        'style-src': ['self'], // 👈 allow your SDK CSS
+        'script-src': ['self', "https://*.apxor.com"],
+        'style-src': ['self', "https://*.apxor.com"],
         'img-src': ['self', 'data:'],
         'connect-src': ['self']
       }
