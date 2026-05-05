@@ -8,7 +8,7 @@ export default {
     adapter: adapter(),
 
     csp: {
-      mode: "nonce",
+      mode: "auto",
       directives: {
         "default-src": ["self"],
         "script-src": ["self", ...domains],
